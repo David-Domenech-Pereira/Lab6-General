@@ -407,3 +407,9 @@ stripe listen --forward-to localhost:8000/payment/webhook
 4. Afegiu un endpoint `GET /transactions` que retorni totes les transaccions guardades.
 
 5. (Repte) Stripe permet fer **reemborsaments** (`Refund`). Implementeu un endpoint `POST /payment/refund` que, donat un `payment_intent_id`, faci un reemborsament complet. Documenteu-vos a: https://docs.stripe.com/api/refunds/create
+
+---
+
+## Codi de referència
+
+- **Backend (Symfony):** [Lab6-Codi-Back](https://github.com/David-Domenech-Pereira/Lab6-Codi-Back)
