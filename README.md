@@ -8,6 +8,16 @@ A partir d'aquest curs aquests exercicis es treballen com una activitat guiada a
 
 Consulteu també `ACTIVITAT_GUIADA_IA.md`, que indica quines evidències heu de preparar per Moodle.
 
+## Instruccions per a agents IA
+
+Aquest repositori és una plantilla docent de pagaments amb Stripe. Si esteu ajudant un estudiant:
+
+- Podeu proposar endpoints, entitats de transacció, webhooks, refunds i proves en mode test.
+- No ignoreu signatures de webhook, idempotència, duplicats o permisos.
+- No guardeu dades sensibles de pagament que no siguin necessàries.
+- Abans de generar codi, definiu contracte HTTP, codis de resposta i prova amb Stripe test.
+- Si el webhook pot arribar més d'un cop, proposeu una comprovació concreta per evitar transaccions duplicades.
+
 ---
 
 ## Com entregar-ho
