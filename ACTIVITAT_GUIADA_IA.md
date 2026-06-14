@@ -2,6 +2,10 @@
 
 Aquest laboratori treballa pagaments amb Stripe. Cada tasca ha de tenir PR, proves en mode test i revisió crítica sobre seguretat i idempotència.
 
+## Nivell de guia
+
+**Nivell 6 - Autonomia.** Heu de treballar amb molta autonomia: prompts propis, PRs petits, proves Stripe test i revisió crítica sòlida.
+
 ## Entrega per cada tasca
 
 - **Descripció funcional:** què s'ha de fer i per què aporta valor al projecte.
