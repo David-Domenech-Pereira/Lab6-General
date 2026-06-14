@@ -1,26 +1,26 @@
 # Activitat guiada amb IA - Lab 6
 
-Aquest repositori és el punt de partida per ampliar un flux de pagament amb Stripe. Amb pagaments, un bon prompt ha de demanar seguretat, validació, idempotència i proves en mode test.
+Aquest laboratori treballa pagaments amb Stripe. Cada tasca ha de tenir PR, proves en mode test i revisió crítica sobre seguretat i idempotència.
 
-## Què heu de fer
+## Entrega per cada tasca
 
-1. Feu un prompt per entendre el flux complet de pagament i webhook.
-2. Feu un prompt per dissenyar `DELETE /cars/{id}` amb codis HTTP.
-3. Feu un prompt per crear i persistir una entitat `Transaction`.
-4. Feu un prompt per evitar duplicats si Stripe reenvia el webhook.
-5. Feu un prompt per definir `GET /transactions`.
-6. Feu un prompt per plantejar `POST /payment/refund` amb `payment_intent_id`.
+- **Descripció funcional:** què s'ha de fer i per què aporta valor al projecte.
+- **Prompt utilitzat:** prompt inicial i prompts de refinament, si n'hi ha.
+- **Pla generat per la IA:** pla complet o resum si l'eina no el guarda.
+- **Link al PR:** URL del PR amb els commits associats. Pot estar obert o merged.
+- **Joc de proves:** casos correctes, errors esperats, codis HTTP, Stripe test, captures, curl/Postman o logs de webhook.
+- **Revisió crítica:** què ha fet bé la IA, què heu hagut de corregir i quines decisions són vostres.
 
-## INPUTS per Moodle
+## Tasques suggerides
 
-- Prompt del flux Stripe en mode test.
-- Prompt de `DELETE /cars/{id}` i codis HTTP.
-- Prompt de `Transaction` amb camps i tipus de dades.
-- Prompt d'idempotència del webhook.
-- Contracte de `GET /transactions`.
-- Contracte de refund i prova planificada.
-- Reflexió final sobre respostes de la IA que no s'han d'acceptar sense revisar.
+1. Implementar o ajustar un endpoint de domini, com `DELETE /cars/{id}`.
+2. Guardar una `Transaction` quan Stripe confirma un pagament.
+3. Implementar `GET /transactions` o `POST /payment/refund`.
 
-## Recordatori
+## Exemple de joc de proves
 
-No accepteu una resposta que ignori signatures de webhook, duplicats, permisos o proves en mode test.
+- Cotxe existent -> 200 o 204.
+- Cotxe inexistent -> 404.
+- Webhook correcte -> transacció guardada.
+- Webhook repetit -> no duplica transacció.
+- `payment_intent_id` invàlid -> error controlat.
